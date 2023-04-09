@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Counter WR</title>
+</head>
+<body>
+    <main class="counter">
+        <section class="counter-count">
+            <div class="menu-button">
+                <span class="material-symbols-outlined status-icon hidden">radio_button_checked</span>
+                <span class="material-icons menu-icon">more_vert</span>
+                <div class="menu hidden">
+                    <span class="menu--element menu-export">Export</span>
+                    <span class="menu--element menu-reset">Reset</span>
+                </div>
+            </div>
+            <div class="counter-count__numbers">
+                <span class="count">0</span>
+            </div>
+            <div class="timer">
+                <span class="time">00:00 Min</span>
+            </div>
+            <div class="counter-count__laps">
+                <div class="laps-title">
+                    <span class="counter-count__laps--element">Nr.</span>
+                    <span class="counter-count__laps--element">Count</span>
+                    <span class="counter-count__laps--element">Set Start</span>
+                    <span class="counter-count__laps--element">Set Finish</span>
+                </div>
+                <div>
+                    <span class="counter-count__laps--element lap-nr">0</span>
+                    <span class="counter-count__laps--element lap-count">0</span>
+                    <span class="counter-count__laps--element lap-timeS">00:00 Min</span>
+                    <span class="counter-count__laps--element lap-timeF">00:00 Min</span>
+                </div>
+            </div>
+        </section>
+        <section class="counter-ui">
+            <div class="counter-ui__button counter-ui__button--plus">
+                <span class="material-icons">add</span>
+            </div>
+            <div class="counter-ui__button counter-ui__button--minus">
+                <span class="material-icons">remove</span>
+            </div>
+            <div class="counter-ui__button counter-ui__button--lap">
+                <span class="material-icons">flag</span>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

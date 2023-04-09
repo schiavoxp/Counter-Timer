@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+body {
+    font-size: 67.5%;
+    font-family: sans-serif;
+    user-select: none;
+    --webkit-user-select: none;
+}
+.counter {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    text-align: center;
+    vertical-align: middle;
+}
+.counter-count {
+    display: grid;
+    grid-template-rows: 5% 70% 10% 15%;
+}
+.menu-button {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.menu-button span {
+    border-radius: 5px;
+}
+.status-icon {
+    color: rgb(129, 7, 7);
+}
+.menu {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin-top: 95px;
+    margin-right: 5px;
+    position: absolute;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 5px;
+    border: 1px rgb(202, 202, 202) solid;
+    font-size: 1.2rem;
+}
+.menu--element {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.counter-count__numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15rem;
+}
+.timer {
+    display: flex;
+    align-items: end;
+    justify-content: right;
+}
+.time {
+    border-radius: 5px;
+    background-color: aquamarine;
+    font-size: xx-large;
+    padding: 10px;
+    margin-right: 5px;
+}
+.counter-count__laps {
+    background-color: rgb(157, 157, 157);
+    border-radius: 15px;
+    margin: .3rem .3rem .3rem .3rem;
+    padding: 10px;
+    display: grid;
+    align-content: center;
+    grid-template-rows: 25% 75%;
+    font-size: x-large;
+}
+.counter-count__laps div {
+    display: grid;
+    grid-template-columns: 15% 25% 30% 30%;
+    justify-content: center;
+    align-content: center;
+}
+.counter-count__laps--element {
+    border-radius: 5px;
+    margin-left: .3rem;
+    margin-right: .3rem;
+    background-color: aliceblue;
+}
+.laps-title {
+    text-align: left;
+}
+.laps-title .counter-count__laps--element {
+    background-color: unset;
+    padding-left: 5px;
+}
+.counter-ui {
+    display: grid;
+    grid-template-rows: 40% 40% 20%;
+}
+.counter-ui__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: .3rem .3rem .3rem .3rem;
+    background-color: rgb(157, 157, 157);
+    font-size: xx-large;
+}
+.hidden {
+    display: none;
+}
+.menu-button span:hover {
+    background-color: rgba(174, 174, 174, 0.805);
+}
+.menu-button span:active {
+    background-color: rgb(226, 226, 226);
+}
+.counter-ui__button:hover {
+    background-color: rgb(182, 181, 181);
+}
+.counter-ui__button:active {
+    background-color: rgb(205, 205, 205);
+}
+
+
