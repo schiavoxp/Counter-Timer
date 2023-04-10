@@ -13,7 +13,7 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 85% 15%;
     text-align: center;
     vertical-align: middle;
 }
@@ -30,12 +30,12 @@ body {
     border-radius: 5px;
 }
 .status-icon {
-    color: rgb(129, 7, 7);
+    color: rgb(163, 8, 8);
 }
 .menu {
     display: grid;
     grid-template-rows: 50% 50%;
-    margin-top: 95px;
+    margin-top: 105px;
     margin-right: 5px;
     position: absolute;
     border-radius: 5px;
@@ -47,6 +47,9 @@ body {
 .menu--element {
     margin-top: 5px;
     margin-bottom: 5px;
+    list-style: none;
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
 }
 .counter-count__numbers {
     display: flex;
@@ -97,7 +100,7 @@ body {
 }
 .counter-ui {
     display: grid;
-    grid-template-rows: 40% 40% 20%;
+    grid-template-rows: 55% 25% 20%;
 }
 .counter-ui__button {
     display: flex;
@@ -111,11 +114,17 @@ body {
 .hidden {
     display: none;
 }
-.menu-button span:hover {
+.menu-icon:hover {
     background-color: rgba(174, 174, 174, 0.805);
 }
-.menu-button span:active {
+.menu-icon:active {
     background-color: rgb(226, 226, 226);
+}
+.menu--element:hover{
+    background-color: rgb(220, 220, 220);
+}
+.menu--element:active{
+    background-color: rgb(239, 238, 238);
 }
 .counter-ui__button:hover {
     background-color: rgb(182, 181, 181);
@@ -123,5 +132,12 @@ body {
 .counter-ui__button:active {
     background-color: rgb(205, 205, 205);
 }
-
-
+.menu--element::after {
+	content: "";
+	display: block;
+	border-bottom: 1px solid #CCC;
+	padding-top: .5rem;
+}
+.menu--element:last-child::after {
+	display: none;
+}

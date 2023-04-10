@@ -128,8 +128,8 @@ function reset() {
         counterLapCount.innerHTML = countLap;
         counterLapTimeStart.innerHTML = timeLapS;
         counterLapTimeFinish.innerHTML = timeLapS;
+        timer.innerHTML = timeLapS;
     }
-
 }
 function popMenu() {
     if (menu.classList.contains("hidden")){
@@ -151,7 +151,7 @@ document.addEventListener("keyup", function(e) {
         add();
     }else if (key === "-"){
         rest();
-    }else if (key === "l") {
+    }else if (key === "s") {
         lap();
     }
 });
