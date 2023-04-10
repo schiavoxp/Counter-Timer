@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./plusminus.ico" type="image/png">
     <title>Counter WR</title>
@@ -15,9 +14,8 @@
     <main class="counter">
         <section class="counter-count">
             <div class="menu-button">
-                <span class="material-symbols-outlined status-icon hidden">radio_button_checked</span>
-                <hr>
-                <span class="material-icons menu-icon">more_vert</span>
+                <span class="material-symbols-outlined menu-button--icon status-icon hidden">radio_button_checked</span>
+                <span class="material-icons menu-button--icon menu-icon">more_vert</span>
                 <ul class="menu hidden">
                     <li class="menu--element menu-export">Export</li>
                     <li class="menu--element menu-reset">Reset</li>
@@ -36,7 +34,7 @@
                     <span class="counter-count__laps--element">Set Start</span>
                     <span class="counter-count__laps--element">Set Finish</span>
                 </div>
-                <div>
+                <div class="laps-data">
                     <span class="counter-count__laps--element lap-nr">0</span>
                     <span class="counter-count__laps--element lap-count">0</span>
                     <span class="counter-count__laps--element lap-timeS">00:00 Min</span>
