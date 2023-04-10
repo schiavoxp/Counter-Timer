@@ -47,6 +47,7 @@ function createCSV(){
     });
     var data = new Blob([csvContent], {type: 'text/csv'});
     saveFile(data, "log.csv");
+    menu.classList.add("hidden");
 }
 function createTime(){
     let min = Math.floor(timeTotal/60);
@@ -129,6 +130,7 @@ function reset() {
         counterLapTimeStart.innerHTML = timeLapS;
         counterLapTimeFinish.innerHTML = timeLapS;
         timer.innerHTML = timeLapS;
+        menu.classList.add("hidden");
     }
 }
 function popMenu() {

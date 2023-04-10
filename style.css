@@ -3,11 +3,20 @@
     margin: 0;
     padding: 0; 
 }
+:root {
+    --main-color: #1D2228;
+    --secondary-color: #FB8122;
+    --hover-color: #ee781e;
+    --click-color: #ff8e38;
+    --font-color: white;
+}
 body {
     font-size: 67.5%;
     font-family: sans-serif;
     user-select: none;
     --webkit-user-select: none;
+    color: var(--font-color);
+    background-color: var(--main-color);
 }
 .counter {
     height: 100vh;
@@ -21,16 +30,21 @@ body {
     display: grid;
     grid-template-rows: 5% 70% 10% 15%;
 }
+.count {
+    font-size: 20rem;
+}
 .menu-button {
     display: flex;
     justify-content: right;
     align-items: center;
 }
-.menu-button span {
+.menu-button--icon {
     border-radius: 5px;
+    margin-left: 5px;
+    font-size: 1.8rem;
 }
 .status-icon {
-    color: rgb(163, 8, 8);
+    color: rgb(198, 11, 11);
 }
 .menu {
     display: grid;
@@ -63,14 +77,13 @@ body {
     justify-content: right;
 }
 .time {
+    font-size: 3rem;
     border-radius: 5px;
-    background-color: aquamarine;
-    font-size: xx-large;
     padding: 10px;
     margin-right: 5px;
 }
 .counter-count__laps {
-    background-color: rgb(157, 157, 157);
+    background-color: var(--secondary-color);
     border-radius: 15px;
     margin: .3rem .3rem .3rem .3rem;
     padding: 10px;
@@ -89,7 +102,7 @@ body {
     border-radius: 5px;
     margin-left: .3rem;
     margin-right: .3rem;
-    background-color: aliceblue;
+    background-color: var(--main-color);
 }
 .laps-title {
     text-align: left;
@@ -97,6 +110,9 @@ body {
 .laps-title .counter-count__laps--element {
     background-color: unset;
     padding-left: 5px;
+}
+.laps-data {
+    font-size: 2rem;
 }
 .counter-ui {
     display: grid;
@@ -108,7 +124,7 @@ body {
     justify-content: center;
     border-radius: 15px;
     margin: .3rem .3rem .3rem .3rem;
-    background-color: rgb(157, 157, 157);
+    background-color: var(--secondary-color);
     font-size: xx-large;
 }
 .hidden {
@@ -121,16 +137,16 @@ body {
     background-color: rgb(226, 226, 226);
 }
 .menu--element:hover{
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(88, 88, 88);
 }
 .menu--element:active{
-    background-color: rgb(239, 238, 238);
+    background-color:rgba(220, 220, 220, 0.716);
 }
 .counter-ui__button:hover {
-    background-color: rgb(182, 181, 181);
+    background-color: var(--hover-color);
 }
 .counter-ui__button:active {
-    background-color: rgb(205, 205, 205);
+    background-color: var(--click-color);
 }
 .menu--element::after {
 	content: "";
