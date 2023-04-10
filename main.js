@@ -18,7 +18,6 @@ let timeTotal = 0;
 let timeLapS = "00:00 Min";
 let timeLapF;
 let lapNr = 0;
-let csvContent = "";
 let setHistory = [["Set Nr.", "Set Count", "Set Start", "Set End", "Total reps"]];
 let first = false;
 let onLap = false;
@@ -41,6 +40,7 @@ function saveFile(blob, filename) {
     }
 }
 function createCSV(){
+    let csvContent = "";
     setHistory.forEach((set) => {
         let row = `${set[0]};${set[1]};${set[2]};${set[3]};${set[4]}\n`
         csvContent += row
