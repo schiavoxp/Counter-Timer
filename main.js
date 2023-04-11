@@ -5,6 +5,7 @@ const menuButton = document.querySelector(".menu-icon");
 const exportButton = document.querySelector(".menu-export");
 const resetButton = document.querySelector(".menu-reset");
 const statusIcon = document.querySelector(".status-icon");
+const wrLogo = document.querySelector(".logo");
 const menu = document.querySelector(".menu");
 const counter = document.querySelector(".count");
 const timer = document.querySelector(".time");
@@ -107,6 +108,9 @@ function add() {
         onLap = true;
         timeLapS = createTime();
     }
+    // if (countTotal >= 607 & wrLogo.classList.contains("hidden")) {
+    //     wrLogo.classList.remove("hidden");
+    // }
     countLap++;
     countTotal++;
     counter.innerHTML = countTotal;
@@ -125,6 +129,9 @@ function reset() {
             clearInterval(interval);
             statusIcon.classList.add("hidden");
         }
+    // if (!wrLogo.classList.contains("hidden")) {
+    //     wrLogo.classList.add("hidden");
+    // }
         countTotal = 0;
         countLap = 0;
         timeTotal = parseInt(prompt("Please enter time in minutes"))*60;
