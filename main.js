@@ -82,6 +82,7 @@ function updateInterfaceTime(){
     timer.innerHTML = createTime();
     if (timeTotal == 0){
         clearInterval(interval);
+        statusIcon.classList.add("hidden");
         lap();
         popMenu();
         finished = true;
