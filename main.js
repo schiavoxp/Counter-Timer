@@ -14,13 +14,16 @@ const counterLapTimeStart = document.querySelector(".lap-timeS")
 const counterLapTimeFinish = document.querySelector(".lap-timeF")
 let countTotal = 0;
 let countLap = 0;
-let timeTotal = 0;
-let timeLapS = "00:00 Min";
+let timeTotal = parseInt(prompt("Please enter time in minutes"))*60;
+const timeInit = timeTotal;
+let timeLapS;
 let timeLapF;
 let lapNr = 0;
 let setHistory = [["Set Nr.", "Set Count", "Set Start", "Set End", "Total reps"]];
 let first = false;
 let onLap = false;
+let finished = false;
+let timeEnding = false;
 let interval;
 
 function saveFile(blob, filename) {
@@ -62,6 +65,7 @@ function createTime(){
     return time;
 }
 function lap(){
+    if (finished) {return;}
     if (countLap != 0){
         lapNr += 1;
         timeLapF = createTime();
@@ -76,19 +80,27 @@ function lap(){
 }
 function updateInterfaceTime(){
     timer.innerHTML = createTime();
-    if (timeTotal >= 1200 & timeTotal <=1300){
+    if (timeTotal == 0){
+        clearInterval(interval);
         lap();
+        popMenu();
+        finished = true;
+        alert("Time finished!!")
+    }else if (timeTotal <= timeInit*0.1 & timeEnding) {
+        timer.classList.add("time-ending");
+        timeEnding = true;
     }
 }
 function start() {
     // if (remainingSeconds === 0) return;
     statusIcon.classList.remove("hidden");
     interval = setInterval( () => {
-        timeTotal++;
+        timeTotal--;
         updateInterfaceTime();
     }, 1000);
 }
 function add() {
+    if (finished) {return;}
     if (first===false) {
         first = true;
         onLap = true;
@@ -102,9 +114,10 @@ function add() {
     counter.innerHTML = countTotal;
 }
 function rest() {
+    if (finished) {return;}
     if (countTotal > 0 && countLap > 0) {
-        countLap -= 1;
-        countTotal -= 1;
+        countLap--;
+        countTotal--;
         counter.innerHTML = countTotal;
     }
 }
@@ -116,13 +129,14 @@ function reset() {
         }
         countTotal = 0;
         countLap = 0;
-        timeTotal = 0;
-        timeLapS = "00:00 Min";
+        timeTotal = parseInt(prompt("Please enter time in minutes"));
+        timeLapS = timeTotal;
         lapNr = 0;
         csvContent = "";
         setHistory = [["Set Nr.", "Set Count", "Set Start", "Set End", "Total reps"]];
         first = false;
         onLap = false;
+        finished = false;
 
         counter.innerHTML = countTotal;
         counterLapNr.innerHTML = lapNr;
@@ -157,3 +171,9 @@ document.addEventListener("keyup", function(e) {
         lap();
     }
 });
+
+const time = createTime();
+timeLapS = time;
+timer.innerHTML = time;
+counterLapTimeStart.innerHTML = time;
+counterLapTimeFinish.innerHTML = time;

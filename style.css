@@ -130,6 +130,9 @@ body {
 .hidden {
     display: none;
 }
+.time-ending {
+    color: red;
+}
 .menu-icon:hover {
     background-color: rgba(174, 174, 174, 0.805);
 }
