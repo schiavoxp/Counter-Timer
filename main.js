@@ -65,7 +65,7 @@ function lap(){
     if (countLap != 0){
         lapNr += 1;
         timeLapF = createTime();
-        setHistory.push([lapNr, countLap, timeLapS, timeLapF, timeTotal]);
+        setHistory.push([lapNr, countLap, timeLapS, timeLapF, countTotal]);
         counterLapNr.innerHTML = lapNr;
         counterLapCount.innerHTML = countLap;
         counterLapTimeStart.innerHTML = timeLapS;
