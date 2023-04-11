@@ -15,7 +15,7 @@ const counterLapTimeFinish = document.querySelector(".lap-timeF")
 let countTotal = 0;
 let countLap = 0;
 let timeTotal = parseInt(prompt("Please enter time in minutes"))*60;
-const timeInit = timeTotal;
+let timeInit = timeTotal;
 let timeLapS;
 let timeLapF;
 let lapNr = 0;
@@ -23,7 +23,6 @@ let setHistory = [["Set Nr.", "Set Count", "Set Start", "Set End", "Total reps"]
 let first = false;
 let onLap = false;
 let finished = false;
-let timeEnding = false;
 let interval;
 
 function saveFile(blob, filename) {
@@ -86,9 +85,8 @@ function updateInterfaceTime(){
         popMenu();
         finished = true;
         alert("Time finished!!")
-    }else if (timeTotal <= timeInit*0.1 & timeEnding) {
+    }else if (timeTotal <= timeInit*0.1 & !timer.classList.contains("time-ending")) {
         timer.classList.add("time-ending");
-        timeEnding = true;
     }
 }
 function start() {
@@ -129,8 +127,9 @@ function reset() {
         }
         countTotal = 0;
         countLap = 0;
-        timeTotal = parseInt(prompt("Please enter time in minutes"));
-        timeLapS = timeTotal;
+        timeTotal = parseInt(prompt("Please enter time in minutes"))*60;
+        timeInit = timeTotal;
+        timeLapS = createTime();
         lapNr = 0;
         csvContent = "";
         setHistory = [["Set Nr.", "Set Count", "Set Start", "Set End", "Total reps"]];
