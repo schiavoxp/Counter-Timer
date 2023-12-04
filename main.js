@@ -109,7 +109,7 @@ function add() {
         onLap = true;
         timeLapS = createTime();
     }
-    if (countTotal >= 607 & wrLogo.classList.contains("hidden")) {
+    if (countTotal >= 662 & wrLogo.classList.contains("hidden")) {
         wrLogo.classList.remove("hidden");
     }
     countLap++;
